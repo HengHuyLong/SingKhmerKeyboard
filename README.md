@@ -26,12 +26,7 @@ There are 40k+ entries out of the box covering consonants, common words, and eve
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-**Step 2:** Install Squirrel (the keyboard engine)
-```bash
-brew install --cask squirrel
-```
-
-**Step 3:** Install SingKhmer
+**Step 2:** Install SingKhmer
 ```bash
 brew tap HengHuyLong/singkhmer
 brew install singkhmer
@@ -41,7 +36,7 @@ One manual step after that — add the keyboard in System Settings:
 
 > **System Settings → Keyboard → Input Sources → Edit → `+` → Chinese, Simplified → Squirrel → Add**
 
-Switch with `Ctrl + Space` and you're good to go.
+Switch keyboard and you're good to go.
 
 Ps* i know it kinda sucks to be under chinese. sadge
 
