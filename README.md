@@ -21,12 +21,18 @@ There are 40k+ entries out of the box covering consonants, common words, and eve
 
 ## Install
 
+**Step 1:** Install Homebrew (skip if you already have it)
 ```bash
-# Install Homebrew first if you don't have it
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
-# Then install SingKhmer
+**Step 2:** Install Squirrel (the keyboard engine)
+```bash
 brew install --cask squirrel
+```
+
+**Step 3:** Install SingKhmer
+```bash
 brew tap huylong/singkhmer
 brew install singkhmer
 ```
