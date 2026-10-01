@@ -1,0 +1,52 @@
+schema:
+  schema_id: xingkhmer
+  name: "XingKhmer"
+  version: "0.4"
+  author:
+    - "Huy Long"
+  description: |
+    Khmer phonetic input method.
+    Type romanized Khmer to get Khmer script suggestions.
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+  translators:
+    - table_translator
+    - punct_translator
+  filters:
+    - uniquifier
+
+speller:
+  alphabet: "abcdefghijklmnopqrstuvwxyz"
+  delimiter: " "
+  algebra:
+    - "derive/nh/ny/"
+    - "derive/ph/f/"
+    - "derive/^kh/x/"
+
+translator:
+  dictionary: xingkhmer
+  enable_sentence: true
+  enable_user_dict: true
+  comment_format:
+    - xform/.*//
+
+key_binder:
+  bindings:
+    - { when: composing, accept: "0", send: Return }
+    - { when: composing, accept: "KP_0", send: Return }
+
+menu:
+  page_size: 9
