@@ -33,7 +33,7 @@ brew install --cask squirrel
 
 **Step 3:** Install SingKhmer
 ```bash
-brew tap huylong/singkhmer
+brew tap HengHuyLong/singkhmer
 brew install singkhmer
 ```
 
