@@ -1,7 +1,7 @@
 schema:
   schema_id: xingkhmer
   name: "XingKhmer"
-  version: "0.4"
+  version: "0.5"
   author:
     - "Huy Long"
   description: |
@@ -14,6 +14,7 @@ engine:
     - recognizer
     - key_binder
     - speller
+    - punctuator
     - selector
     - navigator
     - express_editor
@@ -47,6 +48,19 @@ key_binder:
   bindings:
     - { when: composing, accept: "0", send: Return }
     - { when: composing, accept: "KP_0", send: Return }
+
+punctuator:
+  half_shape:
+    "0": "០"
+    "1": "១"
+    "2": "២"
+    "3": "៣"
+    "4": "៤"
+    "5": "៥"
+    "6": "៦"
+    "7": "៧"
+    "8": "៨"
+    "9": "៩"
 
 menu:
   page_size: 9
