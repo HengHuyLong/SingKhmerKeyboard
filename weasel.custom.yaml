@@ -1,0 +1,34 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.17.4
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Fri Oct  2 09:56:36 2026"
+  rime_version: 1.17.0
+patch:
+  "preset_color_schemes/win11_dark":
+    back_color: 0x242424
+    border_color: 0x333333
+    candidate_text_color: 0xffffff
+    hilited_back_color: 0x242424
+    hilited_candidate_back_color: 0x3d3d3d
+    hilited_candidate_label_color: 0xffffff
+    hilited_candidate_text_color: 0xffffff
+    hilited_mark_color: 0x687CF2
+    hilited_text_color: 0xffffff
+    label_color: 0xaaaaaa
+    name: "Windows 11 Dark"
+    text_color: 0xffffff
+  "style/candidate_list_layout": linear
+  "style/color_scheme": win11_dark
+  "style/font_face": "Kantumruy Pro, Kantumruy, Leelawadee UI, Segoe UI"
+  "style/font_point": 11
+  "style/horizontal": true
+  "style/inline_preedit": true
+  "style/label_font_face": "Segoe UI"
+  "style/label_font_point": 10
+  "style/layout/border_width": 1
+  "style/layout/candidate_spacing": 16
+  "style/layout/corner_radius": 6
+  "style/layout/margin_x": 8
+  "style/layout/margin_y": 6
+  "style/mark_text": ""
