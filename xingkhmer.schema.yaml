@@ -8,14 +8,19 @@ schema:
     Khmer phonetic input method.
     Type romanized Khmer to get Khmer script suggestions.
 
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [" ", " "]
+
 engine:
   processors:
     - ascii_composer
     - recognizer
     - key_binder
     - speller
-    - punctuator
     - selector
+    - punctuator
     - navigator
     - express_editor
   segmentors:
