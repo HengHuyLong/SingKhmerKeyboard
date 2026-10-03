@@ -86,19 +86,82 @@ Ps* i know it kinda sucks to be under chinese. sadge
 
 ---
 
-## Contributing
+## 📁 What are these files?
 
-The dictionary is the most important part of this project. If you know Khmer words that are missing, please add them!
+This project uses [RIME](https://rime.im), an open-source input method engine. RIME doesn't require compiling code — everything is configured through plain YAML files:
 
-Edit `xingkhmer.dict.yaml` and add a line (use **TAB** between columns):
+| File | What it does |
+|:---|:---|
+| `xingkhmer.dict.yaml` | **The Dictionary** — The core word list mapping Khmer words to romanized spelling and frequency weights. |
+| `xingkhmer.schema.yaml` | **The Schema** — Configures engine behavior, fuzzy matching rules (`nh` ↔ `ny`, `ph` ↔ `f`), and candidate window settings. |
+| `default.custom.yaml` | **The Selector** — Tells RIME to load and activate SingKhmer as your active keyboard layout. |
 
+---
+
+## 🛠️ Contributing & Local Testing
+
+Want to add words, fix spellings, or tweak fuzzy matching? I'd love your help!
+
+### 1. Set up for local testing
+
+To test changes live on your machine, your RIME engine needs to read your local repo files:
+
+**On macOS (Squirrel):**
+Config files live in `~/Library/Rime/`. You can copy them over to test:
+```bash
+cp xingkhmer.schema.yaml xingkhmer.dict.yaml default.custom.yaml ~/Library/Rime/
 ```
+
+🤖 **Or tell your AI agent on Mac:**
+```text
+I am on macOS. Please copy or symlink `xingkhmer.schema.yaml`, `xingkhmer.dict.yaml`, and `default.custom.yaml` from this project into `~/Library/Rime/` so I can test my Khmer keyboard edits in Squirrel.
+```
+
+> 💡 **Pro-Tip (Live editing without copying):**
+> You can symlink the files directly from your cloned repo into RIME:
+> ```bash
+> ln -sf "$(pwd)/xingkhmer.dict.yaml" ~/Library/Rime/
+> ln -sf "$(pwd)/xingkhmer.schema.yaml" ~/Library/Rime/
+> ln -sf "$(pwd)/default.custom.yaml" ~/Library/Rime/
+> ```
+> Now, whenever you edit `xingkhmer.dict.yaml` in your code editor, just click **Deploy** in the menu bar and changes take effect immediately!
+
+**On Windows (Weasel):**
+Config files live in `%APPDATA%\Rime`. Copy the `.yaml` files there and click **Redeploy** in the Weasel tray icon.
+
+🤖 **Or tell your AI agent on Windows:**
+```text
+I am on Windows. Please copy `xingkhmer.schema.yaml`, `xingkhmer.dict.yaml`, and `default.custom.yaml` from this project into `%APPDATA%\Rime` so I can test my Khmer keyboard edits in Weasel.
+```
+
+---
+
+### 2. Adding dictionary entries
+
+Open `xingkhmer.dict.yaml` and add your entries after the `...` line.
+
+Format:
+```
+KhmerText[TAB]romanized_code[TAB]weight
+```
+
+Example:
+```tsv
 ខ្មែរ	khmer	200
+សៀមរាប	siemreap	250
 ```
 
-The number at the end is the weight — higher means it shows up first. Use `200` for regular words and `300` for phrases.
+> [!WARNING]
+> Columns **MUST be separated by real TAB characters**, never spaces. Ensure your editor is set to save in **UTF-8**.
 
-Then open a Pull Request.
+### Weight guide
+
+| Weight | Recommended For |
+|:---|:---|
+| `100` | Individual consonants and syllables |
+| `200` | General words and vocabulary |
+| `250` | High-frequency everyday words |
+| `300` | Common multi-word phrases (e.g. `nhomtov` → ខ្ញុំទៅ) |
 
 ---
 
