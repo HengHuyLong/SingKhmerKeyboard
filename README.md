@@ -3,8 +3,7 @@
 A phonetic Khmer keyboard for macOS (and Windows). You type romanized Khmer and it gives you Khmer script — like how Pinyin works for Chinese.
 
 `nhom` → **ខ្ញុំ** · `suosdey` → **សួស្តី** · `arkun` → **អរគុណ**
-
----
+[Install](#install) • [Uninstall](#️-uninstall-macos) 
 
 ## How it works
 
@@ -21,6 +20,8 @@ There are 40k+ entries out of the box covering consonants, common words, and eve
 
 ## Install
 
+### 🍏 macOS
+
 **Step 1:** Install Homebrew (skip if you already have it)
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -28,17 +29,22 @@ There are 40k+ entries out of the box covering consonants, common words, and eve
 
 **Step 2:** Install SingKhmer
 ```bash
-brew tap HengHuyLong/singkhmer
-brew install singkhmer
+brew tap HengHuyLong/singkhmer && brew trust henghuylong/singkhmer && brew install singkhmer
 ```
 
 One manual step after that — add the keyboard in System Settings:
 
 > **System Settings → Keyboard → Input Sources → Edit → `+` → Chinese, Simplified → Squirrel → Add**
 
-Switch keyboard and you're good to go.
+Switch keyboard and you're good to go. *(Ps: i know it kinda sucks to be under chinese. sadge)*
 
-Ps* i know it kinda sucks to be under chinese. sadge
+---
+
+### 🪟 Windows
+
+1. Download **[SingKhmerKeyboard-Windows-Setup.exe](https://github.com/HengHuyLong/SingKhmerKeyboard/releases/latest/download/SingKhmerKeyboard-Windows-Setup.exe)** (or visit [Releases](https://github.com/HengHuyLong/SingKhmerKeyboard/releases)).
+2. Run the installer and click **Next → Install** (it automatically installs and add keyboard. Might restart your computer sometimes*).
+3. Press **`Win + Space`** to switch keyboard and start typing!
 
 ---
 
@@ -170,6 +176,23 @@ Example:
 - [RIME 中州韻](https://rime.im) — input method engine
 - [Squirrel 鼠鬚管](https://github.com/rime/squirrel) — macOS frontend
 - [Weasel 小狼毫](https://github.com/rime/weasel) — Windows frontend
+
+---
+
+## 🗑️ Uninstall
+
+### 🍏 macOS
+```bash
+brew uninstall singkhmer && brew uninstall --cask squirrel && rm -rf ~/Library/Rime
+```
+Then remove **Squirrel** from **System Settings → Keyboard → Text Input → Input Sources**.
+
+### 🪟 Windows
+1. Go to **Settings → Apps → Installed apps** (or *Add or remove programs*).
+2. Find **SingKhmerKeyboard** and **Weasel (小狼毫)**, and click **Uninstall**.
+3. *(Optional)* Delete the `%APPDATA%\Rime` folder to remove any leftover configuration files.
+
+---
 
 ## License
 
