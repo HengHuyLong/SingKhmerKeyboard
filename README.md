@@ -25,6 +25,10 @@ There are 40k+ entries out of the box covering consonants, common words, and eve
 
 ### 🍏 macOS
 
+Open **Terminal** (press `Cmd + Space`, type `Terminal`, and hit `Enter`):
+
+![Terminal app](assets/terminal.png)
+
 **Step 1:** Install Homebrew (skip if you already have it)
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -40,6 +44,11 @@ One manual step after that — add the keyboard in System Settings:
 > **System Settings → Keyboard → Input Sources → Edit → `+` → Chinese, Simplified → Squirrel → Add**
 
 Switch keyboard and you're good to go. *(Ps: i know it kinda sucks to be under chinese. sadge)*
+
+**To update to the latest version in the future to get more words!:**
+```bash
+brew update && brew upgrade singkhmer
+```
 
 ---
 
@@ -185,6 +194,7 @@ Example:
 ## Uninstall
 
 ### 🍏 macOS
+Open **Terminal** and run:
 ```bash
 brew uninstall singkhmer && brew uninstall --cask squirrel && rm -rf ~/Library/Rime
 ```
