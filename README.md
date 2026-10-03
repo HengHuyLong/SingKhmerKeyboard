@@ -3,7 +3,8 @@
 A phonetic Khmer keyboard for macOS (and Windows). You type romanized Khmer and it gives you Khmer script — like how Pinyin works for Chinese.
 
 `nhom` → **ខ្ញុំ** · `suosdey` → **សួស្តី** · `arkun` → **អរគុណ**
-[Install](#install) • [Uninstall](#️-uninstall-macos) 
+
+[Install](#install) • [Uninstall](#uninstall)
 
 ## How it works
 
@@ -179,7 +180,7 @@ Example:
 
 ---
 
-## 🗑️ Uninstall
+## Uninstall
 
 ### 🍏 macOS
 ```bash
