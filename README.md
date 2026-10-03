@@ -32,7 +32,7 @@ There are 40k+ entries out of the box covering consonants, common words, and eve
 
 **Step 2:** Install SingKhmer
 ```bash
-brew tap HengHuyLong/singkhmer && brew trust henghuylong/singkhmer && brew install singkhmer
+brew install --cask squirrel && brew tap HengHuyLong/singkhmer && brew trust henghuylong/singkhmer && brew install singkhmer
 ```
 
 One manual step after that — add the keyboard in System Settings:
