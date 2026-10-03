@@ -4,9 +4,11 @@ A phonetic Khmer keyboard for macOS (and Windows). You type romanized Khmer and 
 
 `nhom` → **ខ្ញុំ** · `suosdey` → **សួស្តី** · `arkun` → **អរគុណ**
 
+![SingKhmer Keyboard Demo](assets/demo.png)
 [Install](#install) • [Uninstall](#uninstall)
 
 ## How it works
+
 
 You type Khmer the way you'd text a friend in English. The keyboard figures out what you mean and shows Khmer script candidates.
 
