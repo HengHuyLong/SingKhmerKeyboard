@@ -1,4 +1,4 @@
-# SingKhmerKeyboard 🇰🇭
+# Sing Khmer Keyboard (SingKhmer) 🇰🇭
 
 A phonetic Khmer keyboard for macOS (and Windows). You type romanized Khmer and it gives you Khmer script — like how Pinyin works for Chinese.
 
