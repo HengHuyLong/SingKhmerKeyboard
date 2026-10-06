@@ -203,8 +203,6 @@ curl -fsSL https://raw.githubusercontent.com/HengHuyLong/SingKhmerKeyboard/main/
 
 > 🔑 **Note:** Terminal may ask for your Mac password to remove files. Characters won't show on screen while typing — just enter your password and hit **Enter**.
 
-Then **Log out and log back in** ( → Log Out).
-
 ### 🪟 Windows
 
 1. Go to **Settings → Apps → Installed apps** (or _Add or remove programs_).
