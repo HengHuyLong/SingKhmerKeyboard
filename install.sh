@@ -49,11 +49,13 @@ curl -fsSL "$BASE_URL/xingkhmer.dict.yaml" -o "$RIME_DIR/xingkhmer.dict.yaml"
 echo "==> Configuring default keyboard..."
 curl -fsSL "$BASE_URL/default.custom.yaml" -o "$RIME_DIR/default.custom.yaml"
 
-# 4. Trigger Squirrel to reload
-if [ -f "/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel" ]; then
-  "/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel" --reload >/dev/null 2>&1 || true
-elif [ -f "$HOME/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel" ]; then
-  "$HOME/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel" --reload >/dev/null 2>&1 || true
+# 4. Start Squirrel and trigger reload
+if [ -d "/Library/Input Methods/Squirrel.app" ]; then
+  open "/Library/Input Methods/Squirrel.app" 2>/dev/null || true
+  "/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel" --reload 2>/dev/null || true
+elif [ -d "$HOME/Library/Input Methods/Squirrel.app" ]; then
+  open "$HOME/Library/Input Methods/Squirrel.app" 2>/dev/null || true
+  "$HOME/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel" --reload 2>/dev/null || true
 fi
 
 echo ""
