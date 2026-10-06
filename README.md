@@ -9,7 +9,6 @@ A phonetic Khmer keyboard for macOS (and Windows). You type romanized Khmer and 
 
 ## How it works
 
-
 You type Khmer the way you'd text a friend in English. The keyboard figures out what you mean and shows Khmer script candidates.
 
 - Multiple spellings work — `nhom`, `knyom`, `khnom` all give you ខ្ញុំ
@@ -29,33 +28,25 @@ Open **Terminal** (press `Cmd + Space`, type `Terminal`, and hit `Enter`):
 
 ![Terminal app](assets/terminal.png)
 
-**Step 1:** Install Homebrew (skip if you already have it)
+Run command:
+
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+curl -fsSL https://raw.githubusercontent.com/HengHuyLong/SingKhmerKeyboard/main/install.sh | bash
 ```
 
-**Step 2:** Install SingKhmer
-```bash
-brew install --cask squirrel && brew tap HengHuyLong/singkhmer && brew trust henghuylong/singkhmer && brew install singkhmer
-```
+Once installed, **Log out and log back in** ( → Log Out) to activate the keyboard.
 
-One manual step after that — add the keyboard in System Settings:
+Then switch keyboard with `Ctrl + Space` and start typing! 🎉
 
-> **System Settings → Keyboard → Input Sources → Edit → `+` → Chinese, Simplified → Squirrel → Add**
-
-Switch keyboard and you're good to go. *(Ps: i know it kinda sucks to be under chinese. sadge)*
-
-**To update to the latest version in the future to get more words!:**
-```bash
-brew update && brew upgrade singkhmer
-```
+**To update in the future to get more words:**
+Just run the install command again!
 
 ---
 
 ### 🪟 Windows
 
 1. Download **[SingKhmerKeyboard-Windows-Setup.exe](https://github.com/HengHuyLong/SingKhmerKeyboard/releases/latest/download/SingKhmerKeyboard-Windows-Setup.exe)** (or visit [Releases](https://github.com/HengHuyLong/SingKhmerKeyboard/releases)).
-2. Run the installer and click **Next → Install** (it automatically installs and add keyboard. Might restart your computer sometimes*).
+2. Run the installer and click **Next → Install** (it automatically installs and add keyboard. Might restart your computer sometimes\*).
 3. Press **`Win + Space`** to switch keyboard and start typing!
 
 ---
@@ -64,42 +55,42 @@ brew update && brew upgrade singkhmer
 
 ### Everyday stuff
 
-| Type | Get | Meaning |
-|:---|:---|:---|
-| `suosdey` | សួស្តី | Hello |
-| `arkun` | អរគុណ | Thank you |
-| `nhom` | ខ្ញុំ | I / me |
-| `bat` | បាទ | Yes (male) |
-| `cas` | ចាស | Yes (female) |
-| `somtos` | សូមទោស | Sorry |
+| Type      | Get    | Meaning      |
+| :-------- | :----- | :----------- |
+| `suosdey` | សួស្តី | Hello        |
+| `arkun`   | អរគុណ  | Thank you    |
+| `nhom`    | ខ្ញុំ  | I / me       |
+| `bat`     | បាទ    | Yes (male)   |
+| `cas`     | ចាស    | Yes (female) |
+| `somtos`  | សូមទោស | Sorry        |
 
 ### Verbs
 
-| Type | Get | Meaning |
-|:---|:---|:---|
-| `tov` | ទៅ | Go |
-| `mok` | មក | Come |
-| `nyam` | ញ៉ាំ | Eat |
-| `thvoe` | ធ្វើ | Do / Make |
-| `niyeay` | និយាយ | Speak |
-| `moel` | មើល | Look / Watch |
+| Type     | Get   | Meaning      |
+| :------- | :---- | :----------- |
+| `tov`    | ទៅ    | Go           |
+| `mok`    | មក    | Come         |
+| `nyam`   | ញ៉ាំ  | Eat          |
+| `thvoe`  | ធ្វើ  | Do / Make    |
+| `niyeay` | និយាយ | Speak        |
+| `moel`   | មើល   | Look / Watch |
 
 ### Phrases
 
-| Type | Get | Meaning |
-|:---|:---|:---|
-| `soksabyteh` | សុខសប្បាយទេ | How are you? |
-| `nhomtov` | ខ្ញុំទៅ | I go |
-| `nhomjong` | ខ្ញុំចង់ | I want |
-| `arkunchraen` | អរគុណច្រើន | Thank you very much |
-| `tlaeyponman` | ថ្លៃប៉ុន្មាន | How much? |
+| Type          | Get          | Meaning             |
+| :------------ | :----------- | :------------------ |
+| `soksabyteh`  | សុខសប្បាយទេ  | How are you?        |
+| `nhomtov`     | ខ្ញុំទៅ      | I go                |
+| `nhomjong`    | ខ្ញុំចង់     | I want              |
+| `arkunchraen` | អរគុណច្រើន   | Thank you very much |
+| `tlaeyponman` | ថ្លៃប៉ុន្មាន | How much?           |
 
-### Places 
+### Places
 
-| Type | Get | Meaning |
-|:---|:---|:---|
-| `phnompenh` | ភ្នំពេញ | Phnom Penh |
-| `kampuchea` | កម្ពុជា | Cambodia |
+| Type        | Get        | Meaning             |
+| :---------- | :--------- | :------------------ |
+| `phnompenh` | ភ្នំពេញ    | Phnom Penh          |
+| `kampuchea` | កម្ពុជា    | Cambodia            |
 | `srokkhmer` | ស្រុកខ្មែរ | Cambodia (informal) |
 
 ---
@@ -108,11 +99,11 @@ brew update && brew upgrade singkhmer
 
 This project uses [RIME](https://rime.im), an open-source input method engine. RIME doesn't require compiling code — everything is configured through plain YAML files:
 
-| File | What it does |
-|:---|:---|
-| `xingkhmer.dict.yaml` | **The Dictionary** — The core word list mapping Khmer words to romanized spelling and frequency weights. |
+| File                    | What it does                                                                                                                |
+| :---------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| `xingkhmer.dict.yaml`   | **The Dictionary** — The core word list mapping Khmer words to romanized spelling and frequency weights.                    |
 | `xingkhmer.schema.yaml` | **The Schema** — Configures engine behavior, fuzzy matching rules (`nh` ↔ `ny`, `ph` ↔ `f`), and candidate window settings. |
-| `default.custom.yaml` | **The Selector** — Tells RIME to load and activate SingKhmer as your active keyboard layout. |
+| `default.custom.yaml`   | **The Selector** — Tells RIME to load and activate SingKhmer as your active keyboard layout.                                |
 
 ---
 
@@ -126,28 +117,33 @@ To test changes live on your machine, your RIME engine needs to read your local 
 
 **On macOS (Squirrel):**
 Config files live in `~/Library/Rime/`. You can copy them over to test:
+
 ```bash
 cp xingkhmer.schema.yaml xingkhmer.dict.yaml default.custom.yaml ~/Library/Rime/
 ```
 
 🤖 **Or tell your AI agent on Mac:**
+
 ```text
 I am on macOS. Please copy or symlink `xingkhmer.schema.yaml`, `xingkhmer.dict.yaml`, and `default.custom.yaml` from this project into `~/Library/Rime/` so I can test my Khmer keyboard edits in Squirrel.
 ```
 
 > 💡 **Pro-Tip (Live editing without copying):**
 > You can symlink the files directly from your cloned repo into RIME:
+>
 > ```bash
 > ln -sf "$(pwd)/xingkhmer.dict.yaml" ~/Library/Rime/
 > ln -sf "$(pwd)/xingkhmer.schema.yaml" ~/Library/Rime/
 > ln -sf "$(pwd)/default.custom.yaml" ~/Library/Rime/
 > ```
+>
 > Now, whenever you edit `xingkhmer.dict.yaml` in your code editor, just click **Deploy** in the menu bar and changes take effect immediately!
 
 **On Windows (Weasel):**
 Config files live in `%APPDATA%\Rime`. Copy the `.yaml` files there and click **Redeploy** in the Weasel tray icon.
 
 🤖 **Or tell your AI agent on Windows:**
+
 ```text
 I am on Windows. Please copy `xingkhmer.schema.yaml`, `xingkhmer.dict.yaml`, and `default.custom.yaml` from this project into `%APPDATA%\Rime` so I can test my Khmer keyboard edits in Weasel.
 ```
@@ -159,11 +155,13 @@ I am on Windows. Please copy `xingkhmer.schema.yaml`, `xingkhmer.dict.yaml`, and
 Open `xingkhmer.dict.yaml` and add your entries after the `...` line.
 
 Format:
+
 ```
 KhmerText[TAB]romanized_code[TAB]weight
 ```
 
 Example:
+
 ```tsv
 ខ្មែរ	khmer	200
 សៀមរាប	siemreap	250
@@ -174,12 +172,12 @@ Example:
 
 ### Weight guide
 
-| Weight | Recommended For |
-|:---|:---|
-| `100` | Individual consonants and syllables |
-| `200` | General words and vocabulary |
-| `250` | High-frequency everyday words |
-| `300` | Common multi-word phrases (e.g. `nhomtov` → ខ្ញុំទៅ) |
+| Weight | Recommended For                                      |
+| :----- | :--------------------------------------------------- |
+| `100`  | Individual consonants and syllables                  |
+| `200`  | General words and vocabulary                         |
+| `250`  | High-frequency everyday words                        |
+| `300`  | Common multi-word phrases (e.g. `nhomtov` → ខ្ញុំទៅ) |
 
 ---
 
@@ -194,16 +192,20 @@ Example:
 ## Uninstall
 
 ### 🍏 macOS
-Open **Terminal** and run:
+
+Open **Terminal** and run to remove everything:
+
 ```bash
-brew uninstall singkhmer && brew uninstall --cask squirrel && rm -rf ~/Library/Rime
+curl -fsSL https://raw.githubusercontent.com/HengHuyLong/SingKhmerKeyboard/main/uninstall.sh | bash
 ```
-Then remove **Squirrel** from **System Settings → Keyboard → Text Input → Input Sources**.
+
+Then **Log out and log back in** ( → Log Out).
 
 ### 🪟 Windows
-1. Go to **Settings → Apps → Installed apps** (or *Add or remove programs*).
+
+1. Go to **Settings → Apps → Installed apps** (or _Add or remove programs_).
 2. Find **SingKhmerKeyboard** and **Weasel (小狼毫)**, and click **Uninstall**.
-3. *(Optional)* Delete the `%APPDATA%\Rime` folder to remove any leftover configuration files.
+3. _(Optional)_ Delete the `%APPDATA%\Rime` folder to remove any leftover configuration files.
 
 ---
 
@@ -213,4 +215,4 @@ Then remove **Squirrel** from **System Settings → Keyboard → Text Input → 
 
 ---
 
-Made for the Khmer community · poggers 
+Made for the Khmer community · poggers

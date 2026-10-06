@@ -2,7 +2,7 @@
 set -e
 
 echo ""
-echo "🇰🇭 Installing SingKhmerKeyboard for macOS..."
+echo "🇰🇭 Installing SingKhmerKeyboard v1.0"
 echo ""
 
 # 1. Check or install Squirrel (supports both Brew and direct download)
@@ -60,14 +60,13 @@ fi
 
 echo ""
 echo "==> SingKhmer installed successfully! 🇰🇭"
-echo "==> One more step — add Squirrel as an input source (if you haven't yet):"
-echo "==>   System Settings → Keyboard → Text Input → Input Sources → Edit → + → Chinese, Simplified → Squirrel"
+echo "==> To activate: Log out and log back in ( → Log Out)."
 echo "==> Then switch keyboard (Ctrl + Space) and type 'nhom' → ខ្ញុំ"
-echo ""
-echo "╔══════════════════════════════════╗"
-echo "║                                  ║"
-echo "║   Made by henghuylong            ║"
-echo "║   Donate me ABA: 000 917 479     ║"
-echo "║                                  ║"
-echo "╚══════════════════════════════════╝"
-echo ""
+# echo ""
+# echo "╔══════════════════════════════════╗"
+# echo "║                                  ║"
+# echo "║   Made by henghuylong            ║"
+# echo "║   Donate me ABA: 000 917 479     ║"
+# echo "║                                  ║"
+# echo "╚══════════════════════════════════╝"
+# echo ""
