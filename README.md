@@ -34,6 +34,8 @@ Run command:
 curl -fsSL https://raw.githubusercontent.com/HengHuyLong/SingKhmerKeyboard/main/install.sh | bash
 ```
 
+> 🔑 **Note:** Terminal may ask for your Mac password to install the keyboard engine. When you type your password, no characters will show on the screen (this is normal for security) — just type it and hit **Enter**.
+
 Once installed, **Log out and log back in** ( → Log Out) to activate the keyboard.
 
 Then switch keyboard with `Ctrl + Space` and start typing! 🎉
@@ -198,6 +200,8 @@ Open **Terminal** and run to remove everything:
 ```bash
 curl -fsSL https://raw.githubusercontent.com/HengHuyLong/SingKhmerKeyboard/main/uninstall.sh | bash
 ```
+
+> 🔑 **Note:** Terminal may ask for your Mac password to remove files. Characters won't show on screen while typing — just enter your password and hit **Enter**.
 
 Then **Log out and log back in** ( → Log Out).
 
