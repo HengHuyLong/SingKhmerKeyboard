@@ -49,6 +49,9 @@ curl -fsSL "$BASE_URL/xingkhmer.dict.yaml" -o "$RIME_DIR/xingkhmer.dict.yaml"
 echo "==> Configuring default keyboard..."
 curl -fsSL "$BASE_URL/default.custom.yaml" -o "$RIME_DIR/default.custom.yaml"
 
+echo "==> Applying Squirrel theme..."
+curl -fsSL "$BASE_URL/squirrel.custom.yaml" -o "$RIME_DIR/squirrel.custom.yaml"
+
 # 4. Start Squirrel and trigger reload
 if [ -d "/Library/Input Methods/Squirrel.app" ]; then
   open "/Library/Input Methods/Squirrel.app" 2>/dev/null || true
